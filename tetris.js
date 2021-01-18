@@ -1,7 +1,3 @@
-// TO DO
-// fix what happens when game ends
-// prevent glitching into the wall and floor when rotating - weird things start happen when a pieces gets places off the screen
-
 const gameWidth = 10;
 const gameHeight = 17;
 const squareSize = 40; // In pixels
@@ -68,7 +64,7 @@ function clearRows() {
   }
   if (rowsToClear.length == 0) { return; }
 
-  console.log(rowsToClear);
+  // console.log(rowsToClear);
   let blankRow = [];
   for (let c=0; c<gameWidth; c++) {
     blankRow.push("");
@@ -177,6 +173,9 @@ function keyPressed() {
     if (currentPiece.canRotate()) {
       currentPiece.rotate();
     }
+  }
+  else if (keyCode == 32) {
+    console.log(board);
   }
 }
 

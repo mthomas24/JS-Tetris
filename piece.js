@@ -95,6 +95,19 @@ class Piece {
       }
     }
 
+    // Check if the rotated shape goes off the screen
+    for (let r=0; r<4; r++) {
+      for (let c=0; c<4; c++) {
+        if (!result[r][c]) { continue; }
+        if (this.col + c < 0 || this.col + c + 1 > gameWidth) {
+          return false;
+        }
+        if (this.row + r + 1 > gameHeight) {
+          return false;
+        }
+      }
+    }
+
     // Check if the rotated shape overlaps with anything
     for (let r=0; r<4; r++) {
       for (let c=0; c<4; c++) {
