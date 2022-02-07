@@ -149,6 +149,8 @@ function draw() {
   }
 }
 
+// ur mom
+
 function keyPressed() {
   if (gameOver) {
     if (keyCode == DOWN_ARROW || keyCode == UP_ARROW || keyCode == LEFT_ARROW || keyCode == RIGHT_ARROW) {
